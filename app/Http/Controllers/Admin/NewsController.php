@@ -17,6 +17,7 @@ class NewsController extends Controller
       // admin/news/createにリダイレクトする
       
         $this->validate($request, News::$rules);
+        
         $news = new News;
         $form = $request->all();
       // フォームから画像が送信されてきたら、保存して、$news->image_path に画像のパスを保存する
